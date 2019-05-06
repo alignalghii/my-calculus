@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\title{Sequence limit: the relation-to-function restriction approach}
+\author{Mark Endrey}
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		Selection out of the $\epsilon$-$n$ relation an $\epsilon$-$n_0$ function
+	\end{abstract}
+
+	\[
+		\lim \frac{3n^2+1}{5n^2-1}
+	\]
+	\[
+		\left|\frac{3n^2+1}{5n^2-1} - \frac35\right| < \epsilon
+	\]
+	\[
+		\epsilon > 0 \land n \geq 0 \land n \neq \pm\frac{\sqrt5}5
+	\]
+
+	\[
+		\lor
+		\begin{cases}
+			       \frac{3n^2+1}{5n^2-1} - \frac35        < \epsilon & {} \land n > \frac{\sqrt5}5\\
+			-\left(\frac{3n^2+1}{5n^2-1} - \frac35\right) < \epsilon & {} \land 0 \leq n < \frac{\sqrt5}5
+		\end{cases}
+	\]
+	\[
+		\lor
+		\begin{cases}
+			\frac{3n^2+1}{5n^2-1} - \frac35 < \epsilon & {} \land n > \frac{\sqrt5}5\\
+			\vspace{-0.4em}\\
+			\frac{3n^2+1}{1-5n^2} + \frac35 < \epsilon & {} \land n < \frac{\sqrt5}5
+		\end{cases}
+	\]
+
+	\[
+		\lor
+		\begin{cases}
+			n > \frac15\sqrt{5+\frac8\epsilon} & \\
+			\vspace{-0.4em}\\
+			n < \frac15\sqrt{5-\frac8\epsilon} & \text{where $\epsilon > \frac85$}
+		\end{cases}
+	\]
+
+	\includegraphics{calc}
+
+	\[
+		n_0 := \frac15\sqrt{5+\frac8\epsilon}
+	\]
+\end{document}
